@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-
-        </title>
+        <title>The Band</title>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="./assets/font-icon/themify-icons.css">
+        <link rel="icon" type="image/x-icon" href="https://cdn.iconscout.com/icon/free/png-256/free-music-859-459997.png?f=webp&w=256">
         <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bảo trình duyệt lấy chiều rộng thật của thiết bị -->
     </head>
     <body>
         <div id="main">
             <div id="header">
                 <ul id="nav">  <!-- begin nav -->
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">TOUR</a></li>
-                    <li><a href="#">BAND</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#band">BAND</a></li>
+                    <li><a href="#tour">TOUR</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                     <li>
                         <a href="#">MORE <i class="arrow-down ti-angle-down"></i></i></a>
                         <ul class="subnav">
@@ -25,9 +27,10 @@
                         </ul>
                     </li>
                 </ul> <!-- end nav -->
-                <!-- begin search button -->
+                <!-- search button -->
                 <div class="search"><i class="search-button ti-search"></i></div>
-            </div> <!-- end search button -->
+                <div class="menu js-menu"><i class="menu-button ti-menu"></i></div>
+            </div>
             <div id="slider">
                 <div class="text">
                     <h2 class="title">Los Angeles</h2>
@@ -38,7 +41,7 @@
             </div>
             <div id="content">
                 <!-- about -->
-                <div class="content-section">
+                <div id="band" class="content-section">
                     <h2 class="content-title">
                         THE BAND
                     </h2>
@@ -51,21 +54,21 @@
                     <!-- Member list -->
                     <div class="row members">
                         <!-- member 1 -->
-                        <div class="col col-3 text-center">
+                        <div class="col col-3 text-center s-col-1 mt16">
                             <div class="member-name">
                                 name
                             </div>
                             <img class="member-img" src="./assets/img/members/member1.jpg" alt="name">
                         </div>
                            <!-- member 2 -->
-                        <div class="col col-3 text-center">
+                        <div class="col col-3 text-center s-col-1 mt16">
                             <div class="member-name">
                                 name
                             </div>
                             <img class="member-img" src="./assets/img/members/member1.jpg" alt="name">
                         </div>
                            <!-- member 3 -->
-                        <div class="col col-3 text-center">
+                        <div class="col col-3 text-center s-col-1 mt16">
                             <div class="member-name">
                                 name
                             </div>
@@ -74,63 +77,63 @@
                     </div>
                 </div>
                 <!-- tour -->
-                    <div class="tour"> <!-- 1 lớp wrapper để cho background của phần này màu đen -->
-                        <div class="text-white content-section">
-                            <h2 class="text-white content-title">
-                                TOUR DATES
-                            </h2>
-                            <div class="content-sub-title">
-                                Remember to book your tickets!
-                            </div>
-                            <!-- months -->
-                            <ul class="ticket-list">
-                                <li class="months-available">
-                                    September
-                                    <span class="sold-out">sold out</span>
-                                </li>
-                                <li class="months-available">
-                                    October
-                                    <span class="sold-out">sold out</span>
-                                </li>
-                                <li class="months-available">
-                                    November
-                                    <span class="available">3</span>
-                                </li>
-                            </ul>
-                            <div class="places row">
-                                <div class="col col-3">
-                                    <img src="./assets/img/places/newyork.jpg" alt="" class="place-img">
-                                    <div class="place-info">
-                                        <p class="place-name">New York</p>
-                                        <p class="place-time">Fri 27 Nov 2016</p>
-                                        <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <button class="place-buy-ticket-btn js-buy-ticket">Buy Tickets</button>
-                                    </div>
-                                </div>
-                                 <div class="col col-3">
-                                    <img src="./assets/img/places/newyork.jpg" alt="" class="place-img">
-                                    <div class="place-info">
-                                        <p class="place-name">New York</p>
-                                        <p class="place-time">Fri 27 Nov 2016</p>
-                                        <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <button class="place-buy-ticket-btn js-buy-ticket">Buy Tickets</button>
-                                    </div>
-                                </div>
-                                 <div class="col col-3">
-                                    <img src="./assets/img/places/newyork.jpg" alt="" class="place-img">
-                                    <div class="place-info">
-                                        <p class="place-name">New York</p>
-                                        <p class="place-time">Fri 27 Nov 2016</p>
-                                        <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                        <button class="place-buy-ticket-btn js-buy-ticket">Buy Tickets</button>
-                                    </div>
-                                </div>
-                                <!-- <div class="clear"></div> -->
-                            </div>
-                            <!-- <ul class="ticket-list"> -->
+                <div id="tour" class="tour-section"> <!-- 1 lớp wrapper để cho background của phần này màu đen -->
+                    <div class="text-white content-section">
+                        <h2 class="text-white content-title">
+                            TOUR DATES
+                        </h2>
+                        <div class="content-sub-title">
+                            Remember to book your tickets!
                         </div>
-            </div>
-                <div class="content-section">
+                        <!-- months -->
+                        <ul class="ticket-list">
+                            <li class="months-available">
+                                September
+                                <span class="sold-out">sold out</span>
+                            </li>
+                            <li class="months-available">
+                                October
+                                <span class="sold-out">sold out</span>
+                            </li>
+                            <li class="months-available">
+                                November
+                                <span class="available">3</span>
+                            </li>
+                        </ul>
+                        <div class="places row">
+                            <div class="col col-3 s-col-1 mt16">
+                                <img src="./assets/img/places/newyork.jpg" alt="" class="place-img">
+                                <div class="place-info">
+                                    <p class="place-name">New York</p>
+                                    <p class="place-time">Fri 27 Nov 2016</p>
+                                    <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="place-buy-ticket-btn js-buy-ticket">Buy Tickets</button>
+                                </div>
+                            </div>
+                                <div class="col col-3 s-col-1 mt16">
+                                <img src="./assets/img/places/paris.jpg" alt="" class="place-img">
+                                <div class="place-info">
+                                    <p class="place-name">Paris</p>
+                                    <p class="place-time">Sat 28 Nov 2016</p>
+                                    <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="place-buy-ticket-btn js-buy-ticket">Buy Tickets</button>
+                                </div>
+                            </div>
+                                <div class="col col-3 s-col-1 mt16">
+                                <img src="./assets/img/places/sanfran.jpg" alt="" class="place-img">
+                                <div class="place-info">
+                                    <p class="place-name">San Francisco</p>
+                                    <p class="place-time">Sun 29 Nov 2016</p>
+                                    <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="place-buy-ticket-btn js-buy-ticket">Buy Tickets</button>
+                                </div>
+                            </div>
+                            <!-- <div class="clear"></div> -->
+                        </div>
+                        <!-- <ul class="ticket-list"> -->
+                    </div>
+                </div>
+                <div id="contact"class="content-section">
                     <h2 class="content-title">
                         CONTACT
                     </h2>
@@ -138,19 +141,19 @@
                         Fan? Drop a note!
                     </div>
                     <div class="contact row">
-                        <ul class="contact-info col col-2">
+                        <ul class="contact-info col col-2 s-col-1">
                             <li><i class="ti-location-pin"></i> Chicago, US</li>
                             <li><i class="ti-headphone-alt"></i> Phone: +00 151515</li>
                             <li><i class="ti-email"></i> Email: mail@mail.com</li>
                         </ul>
-                        <div class="contact-input col col-2">
+                        <div class="contact-input col col-2 s-col-1">
                             <form action="">
 
                                 <div class="row">
-                                    <div class="col col-2">
+                                    <div class="col col-2 s-col-1 mt8">
                                         <input type="text" required class="input-content" placeholder="Name">
                                     </div>
-                                    <div class="col col-2">
+                                    <div class="col col-2 s-col-1 mt8">
                                         <input type="mail" required class="input-content" placeholder="Email">
                                     </div>
                                 </div>
@@ -210,6 +213,41 @@
             const ticket = document.querySelector('.js-ticket');
             const ticketContainer = document.querySelector('.js-ticket-container');
             const ticketCloseBtn= document.querySelector('.js-ticket-close-btn');
+            const menu = document.querySelector('.js-menu');
+            const header = document.querySelector('#header');
+            const more = document.querySelector('#nav li:last-child');
+            const subHeader = document.querySelector('#nav .subnav')
+            const closedHeaderHeight=header.clientHeight;
+            // const menuButtons = document.querySelectorAll('#nav li:nth-child(-n+4)');
+            const menuButtons = document.querySelectorAll('#nav>li:not(:last-child)');
+            for(var i=0;i<menuButtons.length;i++){
+                const menuButton=menuButtons[i];
+                menuButton.addEventListener('click',function(){
+                    header.style.height=closedHeaderHeight+'px';
+                });
+            }
+
+            var openHeaderHeight=0;
+            menu.addEventListener('click',function(){
+                if(header.clientHeight===closedHeaderHeight){
+                    header.style.height='auto';                    
+                    openHeaderHeight = header.clientHeight;
+                }
+                else{
+                    header.style.height=closedHeaderHeight+'px';
+                }
+            })
+            more.addEventListener('click',function(event){
+                event.preventDefault();
+                if(header.clientHeight==openHeaderHeight){
+                    const temp = openHeaderHeight+subHeader.clientHeight;
+
+                    header.style.height=temp+'px';
+                }
+                else{
+                    header.style.height='auto';
+                }
+            })
             function showBuyTicket(){
                 ticket.classList.add('open'); //thêm class open vào thẻ ticket
             }

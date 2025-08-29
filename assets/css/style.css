@@ -5,12 +5,17 @@
 }
 html{
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+
 }
 .text-white{
     color:white;
 }
 .mt8{
-    margin-top:8px;
+    margin-top:8px!important;
+}
+.mt16{
+    margin-top:16px!important;
 }
 .row{
     margin-left: -8px;
@@ -20,6 +25,7 @@ html{
     content: "";
     display: block;
     clear:both;
+    
 }
 .col{
     padding: 0px 8px;
@@ -50,6 +56,7 @@ html{
     right:0;
     /* display: flex; */
     z-index: 1;
+
 }
 #nav{
     display: inline-block;
@@ -106,20 +113,28 @@ html{
 #nav li:hover .subnav{
     display:block;
 }
-#header .search {
+#header .search,#header .menu {
     float:right;
     cursor: pointer;
 }
-#header .search .search-button {
+#header .search .search-button,
+#header .menu .menu-button {
     color: white;
     font-size: 20px;
     padding: 0px 21px;
     line-height: 46px;
     display: block;
 }
+#header .menu .menu-button{
+    display:none;
+}
 #header .search:hover .search-button{
     background-color: #f44336;
     color: fff;
+}
+#header .menu:hover .menu-button{
+    background-color: #fff;
+    color: #000;
 }
 #slider{
     background-color: gray;
@@ -158,6 +173,7 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
     margin-left:auto;
     margin-right: auto;
     max-width: 800px;
+
 }
 #content .content-section .content-title,
 #content .content-section .content-sub-title{
@@ -177,7 +193,7 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
     margin: 15px 0px;
 }
 #content .desc{
-    margin: 15px 0px;
+    margin-top: 15px;
     font-size:15px;
     text-align: justify;
     line-height: 22.5px;
@@ -193,25 +209,25 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
     margin: 15px 0px;
 }
 
-#content .tour{
+#content .tour-section{
     background-color: black;
 }
-#content .tour .ticket-list{
+#content .tour-section .ticket-list{
     background-color:white;
     list-style: none;
     color: rgb(117,117,117);
   
 }
-#content .tour .months-available{
+#content .tour-section .months-available{
     padding: 8px 16px;
     border: 1px solid rgb(224,224,224);
 }
-#content .tour .ticket-list li .sold-out{
+#content .tour-section .ticket-list li .sold-out{
    padding: 0px 8px;
    color: white;
    background-color:rgb(244, 67, 54);
 }
-#content .tour .ticket-list li .available{
+#content .tour-section .ticket-list li .available{
     border-radius: 50%;
     background-color: black;
     color: white;
@@ -222,37 +238,37 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
     height:24px;
     margin-top:-3px;
 }
-#content .tour .places{
-    padding-top:32px;
+#content .tour-section .places{
+    padding-top:16px;
     padding-bottom: 48px;
 }
 
-#content .tour .place-img{
+#content .tour-section .place-img{
     width:100%;
     display: block;
 }
-#content .tour .place-img:hover{
+#content .tour-section .place-img:hover{
     opacity: 0.6;
     
 }
-#content .tour .place-info{
+#content .tour-section .place-info{
     padding: 0.15px 16px;
     font-size:15px;
     color:black;
     background-color:white;
 }
-#content .tour .place-name{
+#content .tour-section .place-name{
     margin: 15px 0px;
     font-weight: bold;
 }
-#content .tour .place-time{
+#content .tour-section .place-time{
     margin: 15px 0px;
     color: gray;
 }
-#content .tour .place-about{
+#content .tour-section .place-about{
     margin: 15px 0px;
 }
-#content .tour .place-buy-ticket-btn{
+#content .tour-section .place-buy-ticket-btn{
     padding: 8px 16px;
     margin-bottom:16px;
     color:white;
@@ -260,7 +276,7 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
     cursor: pointer;
     border: 0px;
 }
-#content .tour .place-buy-ticket-btn:hover{
+#content .tour-section .place-buy-ticket-btn:hover{
     background-color: #ccc;
     color: #000;
 }
@@ -268,7 +284,6 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
     padding:32px 0px;
 }
 #content .content-section .contact .contact-info{
-    max-width: 50%;
     min-height:81px;
     /* display:inline-block; */
     margin-bottom: 16px;
@@ -324,7 +339,7 @@ background: url("../img/slider1.jpg") top center / cover no-repeat;
 }
 .ticket .ticket-container{
     min-width:900px;
-    max-width: calc(100%-32px);
+    max-width: calc(100% - 32px);
     min-height:200px;
     background-color: white;
     position: relative;
